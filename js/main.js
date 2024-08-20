@@ -109,6 +109,8 @@ submit.onclick = (e) => {
         }
     }
 
+    // Boooooooobbbbbsssss
+
     // console.log(qtypeArr);
     console.log(inputsArr);
 
