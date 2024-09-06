@@ -115,12 +115,15 @@ const inputEventHanlders = (input, i) => {
     };
 };
 
-const isFormValid = (func) => {
+const isFormValid = (funcOne, inputError) => {
     for (let i = 0; i < inputCntrs.length; i++) {
         for (let x = 0; x < inputCntrs[i].children.length; x++) {
             let input = inputCntrs[i].children[x];
             if (input.tagName === "INPUT") {
-                func(input, i);
+                funcOne(input, i);
+                if (input.ariaInvalid === "true" && inputError.length < 1) {
+                    inputError.push(input);
+                }
             }
         }
     }
@@ -129,6 +132,11 @@ const isFormValid = (func) => {
 isFormValid(inputEventHanlders);
 
 submit.onclick = (e) => {
+    let inputError = [];
+
     e.preventDefault();
-    isFormValid(checkInputOnblur);
+    isFormValid(checkInputOnblur, inputError);
+    if(inputError.length !== 0) {
+        inputError[0].focus()
+    }
 };
