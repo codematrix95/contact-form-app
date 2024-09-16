@@ -10,3 +10,15 @@
 p {
     color: red;
 }
+
+.gridCntr {
+    background-color: green;
+    display: grid;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
+    > div:first-child {
+        background-color: pink;
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+}

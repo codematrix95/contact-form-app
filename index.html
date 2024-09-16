@@ -19,7 +19,7 @@
         />
 
         <link rel="stylesheet" href="css/main.css" />
-        <script src="/js/main.js" defer></script>
+        <script src="/js/main.js" type="module" defer></script>
         <!-- <script src="https://smtpjs.com/v3/smtp.js" defer></script> -->
 
         <title>Frontend Mentor | Contact form</title>
@@ -32,42 +32,58 @@
             <form action="">
                 <fieldset>
                     <legend>Contact Us</legend>
-                    <div class="inputCntr">
-                        <label for="fname" id="fnameLabel"
-                            >First name <span aria-hidden="true">*</span></label
-                        >
-                        <br />
-                        <input
-                            type="text"
-                            id="fname"
-                            name="fname"
-                            autocomplete="off"
-                            required
-                        />
+                    <div class="gridCntr">
+                        <div>
+                            <div class="inputCntr">
+                                <label for="fname" id="fnameLabel"
+                                    >First name
+                                    <span aria-hidden="true">*</span></label
+                                >
+                                <br />
+                                <input
+                                    type="text"
+                                    id="fname"
+                                    name="fname"
+                                    autocomplete="off"
+                                    required
+                                />
+                            </div>
+                            <p
+                                class="errMsg"
+                                id="fnameErr"
+                                aria-labelledby="fnameLabel"
+                            >
+                                This field is required
+                            </p>
+                        </div>
+
+                        <div>
+                            <div class="inputCntr">
+                                <label for="lname" id="lnameLabel"
+                                    >Last name
+                                    <span aria-hidden="true">*</span></label
+                                >
+                                <br />
+                                <input
+                                    type="text"
+                                    id="lname"
+                                    name="lname"
+                                    autocomplete="off"
+                                    required
+                                />
+                            </div>
+                            <p
+                                class="errMsg"
+                                id="lnameErr"
+                                aria-labelledby="lnameLabel"
+                            >
+                                This field is required
+                            </p>
+                        </div>
                     </div>
-                    <p class="errMsg" id="fnameErr" aria-labelledby="fnameLabel">
-                        This field is required
-                    </p>
 
                     <div class="inputCntr">
-                        <label for="lname" id="lnameLabel"
-                            >Last name <span aria-hidden="true">*</span></label
-                        >
-                        <br />
-                        <input
-                            type="text"
-                            id="lname"
-                            name="lname"
-                            autocomplete="off"
-                            required
-                        />
-                    </div>
-                    <p class="errMsg" id="lnameErr" aria-labelledby="lnameLabel">
-                        This field is required
-                    </p>
-
-                    <div class="inputCntr">
-                        <label for="email" id="emailLabel" 
+                        <label for="email" id="emailLabel"
                             >Email <span aria-hidden="true">*</span></label
                         >
                         <br />
@@ -79,36 +95,48 @@
                             required
                         />
                     </div>
-                    <p class="errMsg" id="emailErr" aria-labelledby="emailLabel">
+                    <p
+                        class="errMsg"
+                        id="emailErr"
+                        aria-labelledby="emailLabel"
+                    >
                         Please enter a valid email address
                     </p>
 
-                    <fieldset class="inputCntr" id="qtype">
+                    <fieldset class="inputCntr" id="qtypeFieldset">
                         <legend id="qtypeLabel">Query Type</legend>
-                        <input
-                            type="radio"
-                            name="qtype"
-                            id="genquiry"
-                            required
-                        />
-                        <label for="genquiry" id="genquiryLabel"
-                            >General Enquiry</label
-                        >
-                        <br />
-                        <input
-                            type="radio"
-                            name="qtype"
-                            id="srequest"
-                            required
-                        />
-                        <label for="srequest" id="srequestLabel"
-                            >Support Request</label
-                        >
-                        <br />
+                        <div class="gridCntr">
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="qtype"
+                                    id="genquiry"
+                                    required
+                                    class="qtypeInput"
+                                />
+                                <label for="genquiry" id="genquiryLabel"
+                                    >General Enquiry</label
+                                >
+                                <br />
+                            </div>
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="qtype"
+                                    id="srequest"
+                                    required
+                                    class="qtypeInput"
+                                />
+                                <label for="srequest" id="srequestLabel"
+                                    >Support Request</label
+                                >
+                                <br />
+                            </div>
+                        </div>
                     </fieldset>
                     <p
                         class="errMsg"
-                        aria-labelledby="qtypeLabel genquiryLabel qtypeLabel srequestLabel"
+                        aria-labelledby="qtypeLabel genquiryLabel"
                     >
                         Please select a query type
                     </p>
