@@ -5,9 +5,7 @@ export const keydown = (i) => {
     inputCntrs[i].addEventListener("keydown", (e) => {
         let input = e.target;
         if (input.type === "text" || input.id === "email") {
-            if (errMsg[i].style.color !== "green") {
-                errMsg[i].style.color = "green";
-            }
+            errMsg[i].style.color !== "purple" ? errMsg[i].style.color = "purple" : false
         }
     });
 };

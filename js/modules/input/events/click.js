@@ -9,15 +9,11 @@ export const click = (i) => {
 
     inputCntrs[i].addEventListener("click", (e) => {
         let input = e.target;
-        if (inputCntrs[i].id === "qtypeFieldset") {
-            isFieldsetValid(e, i, isQtypeValid);
-        }
+        inputCntrs[i].id === "qtypeFieldset"
+            ? isFieldsetValid(e, i, isQtypeValid)
+            : false;
         if (input.id === "consent") {
-            if (input.checked === true) {
-                valid(input, i);
-            } else {
-                error(input, i);
-            }
+            input.checked === true ? valid(input, i) : error(input, i);
         }
     });
 };

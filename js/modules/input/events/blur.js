@@ -3,7 +3,7 @@ import { isEmailValid } from "../validation/isEmailValid.js";
 import { isQtypeValid } from "../../fieldset/validation/isQtypeValid.js";
 import { isFieldsetValid } from "../../fieldset/events/isFieldsetValid.js";
 
-import { error } from "../state/error.js"
+import { error } from "../state/error.js";
 import { valid } from "../state/valid.js";
 
 export const blur = (i) => {
@@ -13,36 +13,25 @@ export const blur = (i) => {
         "blur",
         (e) => {
             let input = e.target;
-            if (input.id === "fname" || input.id === "lname") {
-                isNameValid(input, i);
-            }
-
-            if (input.id === "email") {
-                isEmailValid(input, i);
-            }
-
-            if (inputCntrs[i].id === "qtypeFieldset") {
-                isFieldsetValid(e, i, isQtypeValid);
-            }
+            input.id === "fname" || input.id === "lname"
+                ? isNameValid(input, i)
+                : false;
+            input.id === "email" ? isEmailValid(input, i) : false;
+            inputCntrs[i].id === "qtypeFieldset"
+                ? isFieldsetValid(e, i, isQtypeValid)
+                : false;
 
             if (input.id === "msg") {
-                if (input.value === "") {
-                    error(input, i);
-                } else {
-                    valid(input, i);
-                }
+                // check to see if input has letters
+                input.value === "" ? error(input, i) : valid(input, i)
             }
             if (input.id === "consent") {
-                if (input.checked === false) {
-                    error(input, i);
-                } else {
-                    valid(input, i);
-                }
+                input.checked === false ? error(input, i) : valid(input, i)
             }
 
-            if (input.type === "text" || input.id === "email") {
-                input.value = input.value.replace(/\s+/g, "");
-            }
+            input.type === "text" || input.id === "email"
+                ? (input.value = input.value.replace(/\s+/g, ""))
+                : false;
         },
         true
     );
