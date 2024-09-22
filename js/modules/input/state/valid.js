@@ -1,5 +1,4 @@
-export const valid = (input, i) => {
-    const errMsg = document.querySelectorAll(".errMsg");
+export const valid = (input, errMsg) => {
     input.setAttribute("aria-invalid", "false");
-    errMsg[i].style.color = "pink";
+    errMsg.style.color = "pink";
 };

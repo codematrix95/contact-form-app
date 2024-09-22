@@ -1,6 +1,4 @@
-export const isQtypeValid = (fieldInputs, i) => {
-    const errMsg = [...document.querySelectorAll(".errMsg")];
-
+export const isQtypeValid = (fieldInputs, errMsg) => {
     let inputTrue = fieldInputs.filter((e) => {
         return e.checked === true;
     });
@@ -8,11 +6,11 @@ export const isQtypeValid = (fieldInputs, i) => {
         fieldInputs.forEach((e) => {
             e.setAttribute("aria-invalid", "true");
         });
-        errMsg[i].style.color = "blue";
+        errMsg.style.color = "blue";
     } else {
         fieldInputs.forEach((e) => {
             e.setAttribute("aria-invalid", "false");
         });
-        errMsg[i].style.color = "pink";
+        errMsg.style.color = "pink";
     }
 };
