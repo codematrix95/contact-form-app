@@ -1,4 +1,4 @@
-export const isQtypeValid = (fieldInputs, errMsg) => {
+export const validateQtype = (fieldInputs, errMsg) => {
     let inputTrue = fieldInputs.filter((e) => {
         return e.checked === true;
     });
