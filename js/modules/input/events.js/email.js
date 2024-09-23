@@ -1,17 +1,15 @@
 import { validateEmail } from "../validation/validateEmail.js";
 import { removeWhiteSpace } from "../state/removeWhiteSpace.js";
+import { hideError } from "../state/hideError.js";
 
-export const email = (errMsg) => {
-    const email = document.getElementById("email");
+export const email = (input, errMsg) => {
 
-    email.onblur = (e) => {
+    input.onblur = (e) => {
         validateEmail(e.target, errMsg[2]);
         removeWhiteSpace(e.target);
     };
 
-    email.onkeydown = () => {
-        errMsg[2].style.color !== "purple"
-            ? (errMsg[2].style.color = "purple")
-            : false;
+    input.onkeydown = () => {
+        hideError(errMsg[2]);
     };
-}
+};

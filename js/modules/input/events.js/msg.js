@@ -1,18 +1,12 @@
-import { error } from "../state/error.js";
-import { valid } from "../state/valid.js";
+import { hideError } from "../state/hideError.js";
+import { validateMsg } from "../validation/validateMsg.js";
 
-export const msg = (errMsg) => {
-    const msg = document.getElementById("msg");
-
-    msg.onblur = (e) => {
-        e.target.value === ""
-            ? error(e.target, errMsg[4])
-            : valid(e.target, errMsg[4]);
+export const msg = (input, errMsg) => {
+    input.onblur = (e) => {
+        validateMsg(e.target, errMsg[4])
     };
 
-    msg.onkeydown = () => {
-        errMsg[4].style.color !== "purple"
-            ? (errMsg[4].style.color = "purple")
-            : false;
+    input.onkeydown = () => {
+        hideError(errMsg[4])
     };
 };

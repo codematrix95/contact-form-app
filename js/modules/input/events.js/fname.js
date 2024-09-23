@@ -1,17 +1,14 @@
 import { validateName } from "../validation/validateName.js";
 import { removeWhiteSpace } from "../state/removeWhiteSpace.js";
+import { hideError } from "../state/hideError.js";
 
-export const fname = (errMsg) => {
-    const fname = document.getElementById("fname");
-
-    fname.onblur = (e) => {
+export const fname = (input, errMsg) => {
+    input.onblur = (e) => {
         validateName(e.target, errMsg[0]);
         removeWhiteSpace(e.target);
     };
 
-    fname.onkeydown = () => {
-        errMsg[0].style.color !== "purple"
-            ? (errMsg[0].style.color = "purple")
-            : false;
+    input.onkeydown = () => {
+        hideError(errMsg[0]);
     };
-}
+};
