@@ -1,26 +1,175 @@
 * {
+  margin: 0;
+  padding: 0;
   font-family: "Karla", sans-serif;
-  font-size: 16px;
-  margin: 0px;
-  padding: 0px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
 }
 
-.inputErr {
-  border-color: red;
+@media (min-height: 904px) and (min-width: 500px) {
+  .pageHeight {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 
-p {
-  color: magenta;
+header,
+footer {
+  height: 50px;
 }
 
-.gridCntr {
-  background-color: green;
-  display: grid;
-  grid-template-rows: 1fr, 1fr;
-  grid-template-columns: 1fr 1fr;
+.errMsg {
+  color: transparent;
+  margin: 0;
 }
-.gridCntr > div:first-child {
-  background-color: pink;
-  grid-column-start: 1;
-  grid-column-end: -1;
+
+.text-red {
+  color: hsl(0, 66%, 54%);
+}
+
+.text-white {
+  color: hsl(0, 0%, 100%);
+}
+
+.text-greyMedium {
+  color: hsl(186, 15%, 59%);
+}
+
+.bg-white {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.bg-greyDarker {
+  background-color: hsl(187, 24%, 22%);
+}
+
+.bg-greenMedium {
+  background-color: hsl(169, 82%, 27%);
+}
+
+.bg-greenLighter {
+  background-color: hsl(148, 38%, 91%);
+}
+
+.toast {
+  border: none;
+}
+
+.toast-header {
+  background-color: transparent;
+  border: none;
+}
+
+.rounded-10px {
+  border-radius: 10px;
+}
+
+.rounded-12px {
+  border-radius: 12px;
+}
+
+.h-1 {
+  height: 2.75rem;
+}
+
+.h-2 {
+  height: 3.5rem;
+}
+
+.h-3 {
+  height: 5rem;
+}
+
+.mt-8px {
+  margin-top: 8px;
+}
+
+.border-greyMedium {
+  border: solid hsl(186, 15%, 59%) 1px;
+}
+
+.hover-greenMedium:hover {
+  border: solid hsl(169, 82%, 27%) 1px;
+}
+
+.focus-greenMedium:focus {
+  border: solid hsl(169, 82%, 27%) 1px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hover-btn:hover {
+    background-color: hsl(187, 24%, 22%);
+  }
+}
+.fs-55 {
+  font-size: 1.125rem;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+[type=text],
+[type=email] {
+  outline: none;
+}
+
+.qtypeUnchecked {
+  border: solid hsl(186, 15%, 59%) 1px;
+}
+.qtypeUnchecked input {
+  height: 19px;
+  width: 19px;
+  appearance: none;
+  background-color: hsl(0, 0%, 100%);
+  margin: 0;
+  font: inherit;
+  border: 1.5px solid hsl(186, 15%, 59%);
+  border-radius: 50%;
+  z-index: 2;
+}
+.qtypeUnchecked svg {
+  translate: -19.5px;
+  z-index: 1;
+  opacity: 0;
+}
+
+.qtypeChecked {
+  background-color: hsl(148, 38%, 91%);
+  border: solid hsl(169, 82%, 27%) 1px;
+}
+.qtypeChecked input {
+  opacity: 0;
+}
+.qtypeChecked svg {
+  opacity: 1;
+}
+
+textarea {
+  resize: none;
+}
+
+.consent {
+  min-height: 18px;
+  min-width: 18px;
+  background-color: hsl(0, 0%, 100%);
+  border: solid 1px hsl(186, 15%, 59%);
+  border-radius: 1.5px;
+  z-index: 2;
+  appearance: none;
+}
+
+.checkbox {
+  min-height: 18px;
+  min-width: 18px;
+  translate: -18px 0px;
+  z-index: 1;
 }

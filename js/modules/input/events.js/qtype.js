@@ -1,12 +1,25 @@
 import { validateQtype } from "../../fieldset/validation/validateQtype.js";
 
-export const qtype = (input, errMsg) => {
+export const qtypeEvt = (input, errMsg) => {
     input.forEach((e) => {
-        e.onclick = () => {
-            validateQtype(input, errMsg[3]);
+        let inputTrue = false;
+        e.onclick = (e) => {
+            e.target.parentNode.classList.add("qtypeChecked");
+            if (inputTrue === false) {
+                validateQtype(input, errMsg[3]);
+            }
+            inputTrue = true;
+            for (let i = 0; i < input.length; i++) {
+                if (input[i].checked === false) {
+                    input[i].parentNode.classList.remove("qtypeChecked");
+                }
+            }
         };
+
         e.onblur = () => {
-            validateQtype(input, errMsg[3]);
+            if (inputTrue === false) {
+                validateQtype(input, errMsg[3]);
+            }
         };
     });
 };

@@ -1,39 +1,33 @@
-import { fname } from "./events.js/fname.js";
-import { lname } from "./events.js/lname.js";
-import { email } from "./events.js/email.js";
-import { msg } from "./events.js/msg.js";
-import { qtype } from "./events.js/qtype.js";
-import { consent } from "./events.js/consent.js";
-import { submit } from "./events.js/submit.js";
+import { fnameEvt } from "./events.js/fname.js";
+import { lnameEvt } from "./events.js/lname.js";
+import { emailEvt } from "./events.js/email.js";
+import { msgEvt } from "./events.js/msg.js";
+import { qtypeEvt } from "./events.js/qtype.js";
+import { consentEvt } from "./events.js/consent.js";
+import { submitEvt } from "./events.js/submit.js";
 
 export const init = () => {
-    let inputs = [...document.getElementsByTagName("input")];
+    const fname = document.getElementById("fname");
+    const lname = document.getElementById("lname");
+    const email = document.getElementById("email");
+    const genquiry = document.getElementById("genquiry");
+    const srequest = document.getElementById("srequest");
+    const msg = document.getElementById("msg");
+    const consent = document.getElementById("consent");
+    const submit = document.getElementById("submit");
 
-    const fnameInput = inputs[0];
-    const lnameInput = inputs[1];
-    const emailInput = inputs[2];
-    const qtypeField = [inputs[3], inputs[4]];
-    const msgInput = inputs[5];
-    const consentInput = inputs[6];
-    const submitInput = inputs[7];
+    const qtypeField = [genquiry, srequest];
 
-    inputs = [
-        fnameInput,
-        lnameInput,
-        emailInput,
-        qtypeField,
-        msgInput,
-        consentInput,
-    ];
+    const inputs = [fname, lname, email, qtypeField, msg, consent];
 
-    const errMsg = [...document.getElementsByClassName("errMsg")];
+    const errMsg = document.getElementsByClassName("errMsg");
 
-    fname(fnameInput, errMsg);
-    lname(lnameInput, errMsg);
-    email(emailInput, errMsg);
-    qtype(qtypeField, errMsg);
-    msg(msgInput, errMsg);
-    consent(consentInput, errMsg);
+    fnameEvt(fname, errMsg);
+    lnameEvt(lname, errMsg);
+    emailEvt(email, errMsg);
+    qtypeEvt(qtypeField, errMsg);
+    msgEvt(msg, errMsg);
+    consentEvt(consent, errMsg);
 
-    submit(submitInput, inputs, errMsg);
+    submitEvt(submit, inputs, errMsg);
 };

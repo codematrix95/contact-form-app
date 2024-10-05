@@ -1,18 +1,19 @@
-export const validateQtype = (fieldInputs, errMsg) => {
+export const validateQtype = (fieldInputs, errMsg, e) => {
     let inputTrue = fieldInputs.filter((e) => {
         return e.checked === true;
     });
+
     if (inputTrue.length === 0) {
         fieldInputs.forEach((e) => {
-            e.className = "inputErr"
+            e.classList.add("inputErr")
             e.setAttribute("aria-invalid", "true");
         });
-        errMsg.style.color = "red";
+        errMsg.classList.add("text-red");
     } else {
         fieldInputs.forEach((e) => {
-            e.className = ""
+            e.classList.remove("inputErr")
             e.setAttribute("aria-invalid", "false");
         });
-        errMsg.style.color = "pink";
+        errMsg.classList.remove("text-red");
     }
 };

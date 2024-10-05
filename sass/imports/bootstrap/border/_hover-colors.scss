@@ -1,0 +1,5 @@
+@use "/sass/imports/colors";
+
+.hover-greenMedium:hover {
+    border: solid $greenMedium 1px;
+}

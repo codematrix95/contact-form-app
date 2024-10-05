@@ -1,5 +1,5 @@
 export const hideError = (errMsg) => {
-    errMsg.style.color !== "purple"
-            ? (errMsg.style.color = "purple")
+    errMsg.style.color === "red"
+            ? (errMsg.style.color = "transparent")
             : false;
 }

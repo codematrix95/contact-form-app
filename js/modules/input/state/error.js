@@ -1,5 +1,5 @@
 export const error = (input, errMsg) => {
     input.setAttribute("aria-invalid", "true");
-    input.className = "inputErr"
-    errMsg.style.color = "red";
+    input.classList.add("inputErr")
+    errMsg.classList.add("text-red")
 };
