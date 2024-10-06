@@ -87,19 +87,19 @@ textarea {
     resize: none;
 }
 
-// .consent {
-//     min-height: 18px;
-//     min-width: 18px;
-//     background-color: $white;
-//     border: solid 1px $greyMedium;
-//     border-radius: 1.5px;
-//     z-index: 2;
-//     appearance: none;
-// }
+.consent {
+    min-height: 18px;
+    min-width: 18px;
+    background-color: $white;
+    border: solid 1px $greyMedium;
+    border-radius: 1.5px;
+    z-index: 2;
+    appearance: none;
+}
 
-// .checkbox {
-//     min-height: 18px;
-//     min-width: 18px;
-//     translate: -18px 0px;
-//     z-index: 1;
-// }
+.checkbox {
+    min-height: 18px;
+    min-width: 18px;
+    translate: -18px 0px;
+    z-index: 1;
+}

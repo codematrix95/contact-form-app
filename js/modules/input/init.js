@@ -3,7 +3,7 @@ import { lnameEvt } from "./events.js/lname.js";
 import { emailEvt } from "./events.js/email.js";
 import { msgEvt } from "./events.js/msg.js";
 import { qtypeEvt } from "./events.js/qtype.js";
-// import { consentEvt } from "./events.js/consent.js";
+import { consentEvt } from "./events.js/consent.js";
 import { submitEvt } from "./events.js/submit.js";
 
 export const init = () => {
@@ -27,7 +27,7 @@ export const init = () => {
     emailEvt(email, errMsg);
     qtypeEvt(qtypeField, errMsg);
     msgEvt(msg, errMsg);
-    // consentEvt(consent, errMsg);
+    consentEvt(consent, errMsg);
 
     submitEvt(submit, inputs, errMsg);
 };
