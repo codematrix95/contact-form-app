@@ -1,5 +1,5 @@
 export const hideError = (errMsg) => {
-    errMsg.style.color === "red"
-            ? (errMsg.style.color = "transparent")
-            : false;
-}
+    errMsg.classList.contains("text-red")
+        ? errMsg.classList.remove("text-red")
+        : false;
+};
