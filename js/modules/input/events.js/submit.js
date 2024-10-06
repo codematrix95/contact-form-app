@@ -2,7 +2,7 @@ import { validateName } from "../validation/validateName.js";
 import { validateEmail } from "../validation/validateEmail.js";
 import { validateQtype } from "../../fieldset/validation/validateQtype.js";
 import { validateMsg } from "../validation/validateMsg.js";
-// import { validateConsent } from "../validation/validateConsent.js";
+import { validateConsent } from "../validation/validateConsent.js";
 import { validateForm } from "../validation/validateForm.js";
 import { inputErrFocus } from "../validation/validateForm.js";
 import { messageSent } from "../validation/validateForm.js";
@@ -14,7 +14,7 @@ export const submitEvt = (input, inputs, errMsg) => {
         validateEmail,
         validateQtype,
         validateMsg,
-        // validateConsent,
+        validateConsent,
     ];
 
     input.onclick = (e) => {
