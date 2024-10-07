@@ -2,8 +2,7 @@ import { valid } from "../state/valid.js";
 import { error } from "../state/error.js";
 
 export const validateName = (input, errMsg) => {
-    const errMsgText = "This field is required"
     const nameValidation = /[^a-zA-Z]+/g;
     let name = nameValidation.test(input.value);
-    (name === false && input.value !== "") ? valid(input, errMsg) : error(input, errMsg, errMsgText)
+    (name === false && input.value !== "") ? valid(input, errMsg) : error(input, errMsg)
 };

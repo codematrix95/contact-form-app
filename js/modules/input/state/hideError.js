@@ -1,3 +1,3 @@
 export const hideError = (errMsg) => {
-    errMsg.innerHTML = ""
+    errMsg.classList.remove("text-red");
 };

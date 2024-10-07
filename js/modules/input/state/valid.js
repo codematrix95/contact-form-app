@@ -1,6 +1,6 @@
 export const valid = (input, errMsg) => {
     input.setAttribute("aria-invalid", "false");
-    input.classList.remove("inputErr")
+    input.classList.remove("inputErr");
 
-    errMsg.innerHTML = ""
+    errMsg.classList.remove("text-red");
 };

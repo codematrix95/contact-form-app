@@ -15,8 +15,6 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
   - [Useful resources](#useful-resources)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -34,12 +32,12 @@ Users should be able to:
 
 ### Screenshot
 
-![./my-solution.png]
+![](./my-solution.png)
 
 ### Links
 
-- Solution URL: [https://github.com/codematrix95/contact-form-app]
-- Live Site URL: [https://codematrix95.github.io/contact-form-app/]
+- Solution URL: [https://github.com/codematrix95/contact-form-app]()
+- Live Site URL: [https://codematrix95.github.io/contact-form-app/]()
 
 ## My process
 
@@ -96,7 +94,7 @@ The next thing I want to do is build a project using React because after seeing 
 
 ### Useful resources
 
-- [https://developer.mozilla.org/en-US/] - Some of the documentation can be a little difficult to understand initially but once understand what is going this is a great resource
+- [https://developer.mozilla.org/en-US/]() - Some of the documentation can be a little difficult to understand initially but once understand what is going this is a great resource
 
 ## Acknowledgments
 

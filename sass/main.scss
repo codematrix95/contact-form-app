@@ -1,5 +1,4 @@
-@use "./imports/" as *;
-
+@use "./imports" as *;
 * {
     margin: 0;
     padding: 0;
@@ -11,10 +10,12 @@
 }
 
 .pageHeight {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    @media (min-height: 904px) and (min-width: 500px) {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }
 
 header,
@@ -23,15 +24,17 @@ footer {
 }
 
 .errMsg {
-    color: $red;
-    margin-top: -8px;
-    &:last-of-type {
-        margin-top: 8px;
+    color: transparent;
+    @media (min-width: 0px) {
+        margin-top: -12px;
     }
-}
-
-textarea {
-    margin-bottom: 4px;
+    @media (min-width: 500px) {
+        margin-top: -8px;
+    }
+    margin-bottom: 0;
+    &.text-red {
+        color: $red;
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -46,7 +49,7 @@ h1 {
     font-size: 1rem;
 }
 
-input {
+input, label {
     &:hover {
         cursor: pointer;
     }

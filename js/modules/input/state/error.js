@@ -1,6 +1,5 @@
-export const error = (input, errMsg, errMsgText) => {
+export const error = (input, errMsg) => {
     input.setAttribute("aria-invalid", "true");
     input.classList.add("inputErr")
-
-    errMsg.innerHTML = errMsgText
+    errMsg.classList.add("text-red")
 };
