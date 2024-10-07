@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/codematrix95/contact-form-app]()
-- Live Site URL: [https://codematrix95.github.io/contact-form-app/]()
+- Solution URL: [https://github.com/codematrix95/contact-form-app]
+- Live Site URL: [https://codematrix95.github.io/contact-form-app/]
 
 ## My process
 
