@@ -1,4 +1,4 @@
-@use "/sass/imports/colors";
+@use "../../colors" as *;
 
 .focus-greenMedium:focus {
     border: solid $greenMedium 1px;

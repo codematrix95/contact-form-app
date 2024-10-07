@@ -3,10 +3,10 @@ import { validateMsg } from "../validation/validateMsg.js";
 
 export const msgEvt = (input, errMsg) => {
     input.onblur = (e) => {
-        validateMsg(e.target, errMsg[4])
+        validateMsg(e.target, errMsg)
     };
 
     input.onkeydown = () => {
-        hideError(errMsg[4])
+        hideError(errMsg)
     };
 };

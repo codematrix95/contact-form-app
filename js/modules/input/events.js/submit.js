@@ -24,7 +24,6 @@ export const submitEvt = (input, inputs, errMsg) => {
         }
 
         let inputErr = document.querySelectorAll(".inputErr");
-
         inputErr.length !== 0 ? inputErrFocus(inputErr) : messageSent();
     };
 };

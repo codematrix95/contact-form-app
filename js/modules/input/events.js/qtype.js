@@ -6,7 +6,7 @@ export const qtypeEvt = (input, errMsg) => {
         e.onclick = (e) => {
             e.target.parentNode.classList.add("qtypeChecked");
             if (inputTrue === false) {
-                validateQtype(input, errMsg[3]);
+                validateQtype(input, errMsg);
             }
             inputTrue = true;
             for (let i = 0; i < input.length; i++) {
@@ -18,7 +18,7 @@ export const qtypeEvt = (input, errMsg) => {
 
         e.onblur = () => {
             if (inputTrue === false) {
-                validateQtype(input, errMsg[3]);
+                validateQtype(input, errMsg);
             }
         };
     });

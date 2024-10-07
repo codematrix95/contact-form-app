@@ -75,251 +75,261 @@
         </div>
 
         <div class="pageHeight bg-greenLighter">
-            <header class="d-flex justify-content-center align-items-center">
-                <h1 class="m-0 opacity-0">Contact Form</h1>
-            </header>
+            <div class="bg-greenLighter">
+                <header
+                    class="d-flex justify-content-center align-items-center"
+                >
+                    <h1 class="m-0 opacity-0">Contact Form</h1>
+                </header>
 
-            <div
-                class="col-10 col-md-8 col-lg-8 col-xl-6 col-xxl-5 p-3 p-sm-5 mx-auto bg-white rounded-12px"
-            >
-                <main>
-                    <form action="">
-                        <fieldset>
-                            <legend class="fw-semibold fs-2">Contact Us</legend>
-                            <div
-                                id="fullName"
-                                class="d-flex flex-column flex-sm-row"
-                            >
-                                <div class="w-100 me-sm-2">
-                                    <div>
-                                        <label for="fname" id="fnameLabel"
-                                            >First name
-                                            <span aria-hidden="true"> *</span>
-                                        </label>
-
-                                        <input
-                                            type="text"
-                                            id="fname"
-                                            name="fname"
-                                            autocomplete="off"
-                                            required
-                                            class="w-100 py-2 px-3 rounded-3 border-greyMedium hover-greenMedium focus-greenMedium my-2 fs-55"
-                                        />
-                                    </div>
-                                    <p
-                                        class="errMsg"
-                                        id="fnameErr"
-                                        aria-labelledby="fnameLabel"
-                                    >
-                                        This field is required
-                                    </p>
-                                </div>
-                                <div class="w-100 ms-sm-2">
-                                    <div>
-                                        <label for="lname" id="lnameLabel"
-                                            >Last name
-                                            <span aria-hidden="true">
-                                                *</span
-                                            ></label
-                                        >
-
-                                        <input
-                                            type="text"
-                                            id="lname"
-                                            name="lname"
-                                            autocomplete="off"
-                                            required
-                                            class="w-100 py-2 px-3 rounded-3 border-greyMedium hover-greenMedium focus-greenMedium my-2 fs-55"
-                                        />
-                                    </div>
-                                    <p
-                                        class="errMsg"
-                                        id="lnameErr"
-                                        aria-labelledby="lnameLabel"
-                                    >
-                                        This field is required
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label for="email" id="emailLabel"
-                                    >Email
-                                    <span aria-hidden="true"> *</span></label
-                                >
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    autocomplete="off"
-                                    required
-                                    class="w-100 py-2 px-3 rounded-3 border-greyMedium hover-greenMedium focus-greenMedium my-2 fs-55"
-                                />
-                            </div>
-                            <p class="errMsg" aria-labelledby="emailLabel">
-                                Please enter a valid email address
-                            </p>
-
+                <div
+                    class="col-10 col-md-8 col-lg-8 col-xl-6 col-xxl-5 p-3 p-sm-5 mx-auto bg-white rounded-12px"
+                >
+                    <main>
+                        <form action="">
                             <fieldset>
-                                <legend class="fs-6">
-                                    Query Type
-                                    <span aria-hidden="true"> *</span>
+                                <legend class="fw-semibold fs-2">
+                                    Contact Us
                                 </legend>
                                 <div
-                                    id="queryType"
+                                    id="fullName"
                                     class="d-flex flex-column flex-sm-row"
                                 >
-                                    <div
-                                        class="d-flex align-items-center w-100 me-sm-2 my-2 ps-1 py-2 rounded-3 qtypeUnchecked"
-                                    >
-                                        <input
-                                            type="radio"
-                                            name="qtype"
-                                            id="genquiry"
-                                            required
-                                            class="ms-3"
-                                        />
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="20"
-                                            height="21"
-                                            fill="none"
-                                            viewBox="0 0 20 21"
-                                            class="qtypeSvg"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                fill="#0C7D69"
-                                                d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z"
+                                    <div class="w-100 me-sm-2">
+                                        <div class="my-2">
+                                            <label for="fname" id="fnameLabel"
+                                                >First name
+                                                <span aria-hidden="true">
+                                                    *</span
+                                                >
+                                            </label>
+
+                                            <input
+                                                type="text"
+                                                id="fname"
+                                                name="fname"
+                                                autocomplete="off"
+                                                required
+                                                class="w-100 py-2 px-3 rounded-3 border-greyMedium hover-greenMedium focus-greenMedium my-2 fs-55"
                                             />
-                                        </svg>
-                                        <label
-                                            for="genquiry"
-                                            id="genquiryLabel"
-                                            class="fs-55"
-                                            >General Enquiry</label
-                                        >
+                                        </div>
+                                        <p
+                                            class="errMsg"
+                                            id="fnameErr"
+                                            aria-labelledby="fnameLabel"
+                                        ></p>
                                     </div>
-                                    <div
-                                        class="d-flex align-items-center w-100 ms-sm-2 my-2 ps-1 py-2 rounded-3 qtypeUnchecked"
-                                    >
-                                        <input
-                                            type="radio"
-                                            name="qtype"
-                                            id="srequest"
-                                            required
-                                            class="ms-3"
-                                        />
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="20"
-                                            height="21"
-                                            fill="none"
-                                            viewBox="0 0 20 21"
-                                            class="qtypeSvg"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                fill="#0C7D69"
-                                                d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z"
+                                    <div class="w-100 ms-sm-2">
+                                        <div class="my-2">
+                                            <label for="lname" id="lnameLabel"
+                                                >Last name
+                                                <span aria-hidden="true">
+                                                    *</span
+                                                ></label
+                                            >
+
+                                            <input
+                                                type="text"
+                                                id="lname"
+                                                name="lname"
+                                                autocomplete="off"
+                                                required
+                                                class="w-100 py-2 px-3 rounded-3 border-greyMedium hover-greenMedium focus-greenMedium my-2 fs-55"
                                             />
-                                        </svg>
-                                        <label
-                                            for="srequest"
-                                            id="srequestLabel"
-                                            class="fs-55"
-                                            >Support Request</label
-                                        >
+                                        </div>
+                                        <p
+                                            class="errMsg"
+                                            id="lnameErr"
+                                            aria-labelledby="lnameLabel"
+                                        ></p>
                                     </div>
                                 </div>
-                            </fieldset>
-                            <p
-                                class="errMsg"
-                                aria-labelledby="qtypeLabel genquiryLabel"
-                            >
-                                Please select a query type
-                            </p>
-                            <div>
-                                <label for="msg" id="msgLabel"
-                                    >Message
-                                    <span aria-hidden="true"> *</span></label
-                                >
 
-                                <textarea
-                                    type="text"
-                                    name="msg"
-                                    id="msg"
-                                    autocomplete="off"
-                                    required
-                                    class="w-100 my-2 py-2 px-3 rounded-3 border-greyMedium hover-greenMedium focus-greenMedium h-3 fs-55"
-                                ></textarea>
-                            </div>
-                            <p class="errMsg" aria-labelledby="msgLabel">
-                                This field is required
-                            </p>
-
-                            <div class="d-flex align-items-center my-2">
-                                <input
-                                    type="checkbox"
-                                    name="consent"
-                                    id="consent"
-                                    required
-                                    class="consent hover-greenMedium"
-                                />
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="18"
-                                    height="18"
-                                    fill="none"
-                                    viewBox="0 0 18 18"
-                                    class="checkbox"
-                                >
-                                    <path
-                                        fill="#0C7D69"
-                                        d="M16.5 0h-15A1.5 1.5 0 0 0 0 1.5v15A1.5 1.5 0 0 0 1.5 18h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 16.5 0Zm-3.22 7.28-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.751.751 0 0 1 1.06 1.06Z"
+                                <div class="my-2">
+                                    <label for="email" id="emailLabel"
+                                        >Email
+                                        <span aria-hidden="true">
+                                            *</span
+                                        ></label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        autocomplete="off"
+                                        required
+                                        class="w-100 py-2 px-3 rounded-3 border-greyMedium hover-greenMedium focus-greenMedium my-2 fs-55"
                                     />
-                                </svg>
-                                <label for="consent" id="consentLabel">
-                                    I consent to being contacted by the team
-                                    <span aria-hidden="true"> *</span>
-                                </label>
-                            </div>
-                            <p class="errMsg" aria-labelledby="consentLabel">
-                                To submit this form, please consent to being
-                                contacted
-                            </p>
+                                </div>
+                                <p
+                                    class="errMsg"
+                                    aria-labelledby="emailLabel"
+                                ></p>
 
-                            <input
-                                type="submit"
-                                value="Submit"
-                                id="submit"
-                                class="w-100 bg-greenMedium rounded-2 text-white border-0 fw-semibold h-2 fs-55 hover-btn"
-                            />
-                        </fieldset>
-                    </form>
-                </main>
-            </div>
+                                <fieldset class="my-2">
+                                    <legend class="fs-6">
+                                        Query Type
+                                        <span aria-hidden="true"> *</span>
+                                    </legend>
+                                    <div
+                                        id="queryType"
+                                        class="d-flex flex-column flex-sm-row"
+                                    >
+                                        <div
+                                            class="d-flex align-items-center w-100 me-sm-2 my-2 ps-1 py-2 rounded-3 qtypeUnchecked"
+                                        >
+                                            <input
+                                                type="radio"
+                                                name="qtype"
+                                                id="genquiry"
+                                                required
+                                                class="ms-3"
+                                            />
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="20"
+                                                height="21"
+                                                fill="none"
+                                                viewBox="0 0 20 21"
+                                                class="qtypeSvg"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    fill="#0C7D69"
+                                                    d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z"
+                                                />
+                                            </svg>
+                                            <label
+                                                for="genquiry"
+                                                id="genquiryLabel"
+                                                class="fs-55"
+                                                >General Enquiry</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center w-100 ms-sm-2 my-2 ps-1 py-2 rounded-3 qtypeUnchecked"
+                                        >
+                                            <input
+                                                type="radio"
+                                                name="qtype"
+                                                id="srequest"
+                                                required
+                                                class="ms-3"
+                                            />
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="20"
+                                                height="21"
+                                                fill="none"
+                                                viewBox="0 0 20 21"
+                                                class="qtypeSvg"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    fill="#0C7D69"
+                                                    d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z"
+                                                />
+                                            </svg>
+                                            <label
+                                                for="srequest"
+                                                id="srequestLabel"
+                                                class="fs-55"
+                                                >Support Request</label
+                                            >
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <p
+                                    class="errMsg"
+                                    aria-labelledby="qtypeLabel genquiryLabel"
+                                ></p>
+                                <div class="my-2">
+                                    <label for="msg" id="msgLabel"
+                                        >Message
+                                        <span aria-hidden="true">
+                                            *</span
+                                        ></label
+                                    >
 
-            <footer class="d-flex justify-content-center align-items-center">
-                <ul
-                    class="attribution d-flex flex-column align-items-center m-0 p-0 list-unstyled"
+                                    <textarea
+                                        type="text"
+                                        name="msg"
+                                        id="msg"
+                                        autocomplete="off"
+                                        required
+                                        class="w-100 mt-2 py-2 px-3 rounded-3 border-greyMedium hover-greenMedium focus-greenMedium h-3 fs-55"
+                                    ></textarea>
+                                </div>
+                                <p
+                                    class="errMsg"
+                                    aria-labelledby="msgLabel"
+                                ></p>
+
+                                <div class="d-flex align-items-center my-2">
+                                    <input
+                                        type="checkbox"
+                                        name="consent"
+                                        id="consent"
+                                        required
+                                        class="consent hover-greenMedium"
+                                    />
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="18"
+                                        height="18"
+                                        fill="none"
+                                        viewBox="0 0 18 18"
+                                        class="checkbox"
+                                    >
+                                        <path
+                                            fill="#0C7D69"
+                                            d="M16.5 0h-15A1.5 1.5 0 0 0 0 1.5v15A1.5 1.5 0 0 0 1.5 18h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 16.5 0Zm-3.22 7.28-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.751.751 0 0 1 1.06 1.06Z"
+                                        />
+                                    </svg>
+                                    <label for="consent" id="consentLabel">
+                                        I consent to being contacted by the team
+                                        <span aria-hidden="true"> *</span>
+                                    </label>
+                                </div>
+                                <p
+                                    class="errMsg"
+                                    aria-labelledby="consentLabel"
+                                ></p>
+
+                                <input
+                                    type="submit"
+                                    value="Submit"
+                                    id="submit"
+                                    class="w-100 bg-greenMedium rounded-2 text-white border-0 fw-semibold h-2 fs-55 hover-btn"
+                                />
+                            </fieldset>
+                        </form>
+                    </main>
+                </div>
+                <footer
+                    class="d-flex justify-content-center align-items-center"
                 >
-                    <li>
-                        Challenge by
-                        <a href="https://www.frontendmentor.io?ref=challenge"
-                            >Frontend Mentor</a
-                        >
-                    </li>
-                    <li class="d-flex justify-content-center">
-                        Coded by
-                        <a
-                            class="ms-1"
-                            href="https://github.com/codematrix95?tab=repositories"
-                            >Codematrix95</a
-                        >
-                    </li>
-                </ul>
-            </footer>
+                    <ul
+                        class="attribution d-flex flex-column align-items-center m-0 p-0 list-unstyled"
+                    >
+                        <li>
+                            Challenge by
+                            <a
+                                href="https://www.frontendmentor.io?ref=challenge"
+                                >Frontend Mentor</a
+                            >
+                        </li>
+                        <li class="d-flex justify-content-center">
+                            Coded by
+                            <a
+                                class="ms-1"
+                                href="https://github.com/codematrix95?tab=repositories"
+                                >Codematrix95</a
+                            >
+                        </li>
+                    </ul>
+                </footer>
+            </div>
         </div>
     </body>
 </html>

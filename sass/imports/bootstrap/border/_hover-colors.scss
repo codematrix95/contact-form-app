@@ -1,4 +1,4 @@
-@use "/sass/imports/colors";
+@use "../../colors" as *;
 
 .hover-greenMedium:hover {
     border: solid $greenMedium 1px;

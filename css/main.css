@@ -1,42 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Karla", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
+.toast {
+  border: none;
 }
 
-@media (min-height: 904px) and (min-width: 500px) {
-  .pageHeight {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-}
-
-header,
-footer {
-  height: 50px;
-}
-
-.errMsg {
-  color: transparent;
-  margin: 0;
-}
-
-.text-red {
-  color: hsl(0, 66%, 54%);
-}
-
-.text-white {
-  color: hsl(0, 0%, 100%);
-}
-
-.text-greyMedium {
-  color: hsl(186, 15%, 59%);
+.toast-header {
+  background-color: transparent;
+  border: none;
 }
 
 .bg-white {
@@ -55,21 +23,16 @@ footer {
   background-color: hsl(148, 38%, 91%);
 }
 
-.toast {
-  border: none;
+.text-white {
+  color: hsl(0, 0%, 100%);
 }
 
-.toast-header {
-  background-color: transparent;
-  border: none;
+.text-greyMedium {
+  color: hsl(186, 15%, 59%);
 }
 
-.rounded-10px {
-  border-radius: 10px;
-}
-
-.rounded-12px {
-  border-radius: 12px;
+.fs-55 {
+  font-size: 1.125rem;
 }
 
 .h-1 {
@@ -84,20 +47,58 @@ footer {
   height: 5rem;
 }
 
-.mt-8px {
-  margin-top: 8px;
-}
-
 .border-greyMedium {
   border: solid hsl(186, 15%, 59%) 1px;
+}
+
+.focus-greenMedium:focus {
+  border: solid hsl(169, 82%, 27%) 1px;
 }
 
 .hover-greenMedium:hover {
   border: solid hsl(169, 82%, 27%) 1px;
 }
 
-.focus-greenMedium:focus {
-  border: solid hsl(169, 82%, 27%) 1px;
+.rounded-10px {
+  border-radius: 10px;
+}
+
+.rounded-12px {
+  border-radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.pageHeight {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+header,
+footer {
+  min-height: 50px;
+}
+
+.errMsg {
+  color: hsl(0, 66%, 54%);
+  margin-top: -8px;
+}
+.errMsg:last-of-type {
+  margin-top: 8px;
+}
+
+textarea {
+  margin-bottom: 4px;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -105,10 +106,6 @@ footer {
     background-color: hsl(187, 24%, 22%);
   }
 }
-.fs-55 {
-  font-size: 1.125rem;
-}
-
 h1 {
   font-size: 1rem;
 }

@@ -4,11 +4,11 @@ import { hideError } from "../state/hideError.js";
 
 export const fnameEvt = (input, errMsg) => {
     input.onblur = (e) => {
-        validateName(e.target, errMsg[0]);
         removeWhiteSpace(e.target);
+        validateName(e.target, errMsg);
     };
 
     input.onkeydown = () => {
-        hideError(errMsg[0]);
+        hideError(errMsg);
     };
 };

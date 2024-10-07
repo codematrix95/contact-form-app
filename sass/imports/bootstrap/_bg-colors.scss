@@ -1,4 +1,4 @@
-@forward "../colors";
+@use "../colors" as *;
 
 .bg-white {
     background-color: $white;

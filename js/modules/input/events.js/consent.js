@@ -6,10 +6,10 @@ export const consentEvt = (input, errMsg) => {
             ? (e.target.style.opacity = "0")
             : (e.target.style.opacity = "");
 
-        validateConsent(e.target, errMsg[5]);
+        validateConsent(e.target, errMsg);
     };
 
     input.onblur = (e) => {
-        validateConsent(e.target, errMsg[5]);
+        validateConsent(e.target, errMsg);
     };
 };

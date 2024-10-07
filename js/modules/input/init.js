@@ -22,12 +22,12 @@ export const init = () => {
 
     const errMsg = document.getElementsByClassName("errMsg");
 
-    fnameEvt(fname, errMsg);
-    lnameEvt(lname, errMsg);
-    emailEvt(email, errMsg);
-    qtypeEvt(qtypeField, errMsg);
-    msgEvt(msg, errMsg);
-    consentEvt(consent, errMsg);
+    fnameEvt(fname, errMsg[0]);
+    lnameEvt(lname, errMsg[1]);
+    emailEvt(email, errMsg[2]);
+    qtypeEvt(qtypeField, errMsg[3]);
+    msgEvt(msg, errMsg[4]);
+    consentEvt(consent, errMsg[5]);
 
     submitEvt(submit, inputs, errMsg);
 };

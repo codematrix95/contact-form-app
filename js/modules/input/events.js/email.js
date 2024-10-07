@@ -4,13 +4,13 @@ import { hideError } from "../state/hideError.js";
 
 export const emailEvt = (input, errMsg) => {
     input.onblur = (e) => {
-        validateEmail(e.target, errMsg[2]);
         removeWhiteSpace(e.target);
+        validateEmail(e.target, errMsg);
     };
 
     input.onkeydown = () => {
         if (input.value !== "") {
-            hideError(errMsg[2]);
+            hideError(errMsg);
         }
     };
 };
